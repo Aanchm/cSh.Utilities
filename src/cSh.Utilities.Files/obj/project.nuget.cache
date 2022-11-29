@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "giu5EDPLIZQia1LnqLidYvfg/d7tc1GVsy8yKtg5e78lXFt8p3hlULkRqYWppu5WrQfdCeCqi1SFF4Gyj/+eJw==",
+  "dgSpecHash": "0zlyG27GEZxjHgVf2sJobsY9KWbfYM5CrfnVxQ5Gh92yXxWrzdRu8LRs1E7VQE0MYOnlGwTmJEU061n3zNj8bA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\cSh.Utilities.Files\\cSh.Utilities.Files.csproj",
+  "projectFilePath": "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\src\\cSh.Utilities.Files\\cSh.Utilities.Files.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aanchal Mittal\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Aanchal Mittal\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

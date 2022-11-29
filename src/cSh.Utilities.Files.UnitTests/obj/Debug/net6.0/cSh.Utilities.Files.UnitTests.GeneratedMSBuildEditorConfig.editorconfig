@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = cSh.Utilities.Files.UnitTests
-build_property.ProjectDir = C:\Users\Aanchal Mittal\OneDrive\Documents\Professional\repos\cSh.Utilities\cSh.Utilities.Files.UnitTests\
+build_property.ProjectDir = C:\Users\Aanchal Mittal\OneDrive\Documents\Professional\repos\cSh.Utilities\src\cSh.Utilities.Files.UnitTests\

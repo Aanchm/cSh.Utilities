@@ -1,25 +1,26 @@
 ﻿using DeepEqual.Syntax;
+using System.Linq;
 using Xunit;
+using Xunit.Sdk;
 
 namespace cSh.Utilities.Files.UnitTests
 {
     public class FileSortTests
     {
         FileSort fileSort;
-        string fileLocation = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\TestFiles";
+        string fileLocation = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\src\\TestFiles\\";
 
         [Fact]
         public void GoodInput_ReturnsCorrectJsonFiles()
         {
             //Arrange
             fileSort = new FileSort(fileLocation);
-
-            string fileName1 = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\TestFiles\\Dict_1.json";
+            string fileName1 = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\src\\TestFiles\\Dict_1.json";
             var fileInfo1 = new FileInfo(fileName1);
-            string fileName2 = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\TestFiles\\Dict_2.json";
+            string fileName2 = "C:\\Users\\Aanchal Mittal\\OneDrive\\Documents\\Professional\\repos\\cSh.Utilities\\srcTestFiles\\Dict_2.json";
             var fileInfo2 = new FileInfo(fileName2);
 
-            var expectedData = new List<DataFormat>();
+            var fileInfo = new List<FileInfo>() {fileInfo1, fileInfo2};
 
             var jsonData1 = new Dictionary<string, string>()
             {
@@ -39,14 +40,22 @@ namespace cSh.Utilities.Files.UnitTests
                 ["StartPos"] = "10",
             };
 
-            expectedData.AddRange(new List<DataFormat>
-            {
-                new DataFormat{File = fileInfo1, Data = jsonData1},
-                new DataFormat{File = fileInfo2, Data = jsonData2}
-            });
+            var data = new List<Dictionary<string, string>>() { jsonData1, jsonData2 };
 
-            bool result = expectedData.IsDeepEqual(fileSort.UniqueJsonFiles.ToList());
-            Assert.True(result);
+
+
+            for (int i = 0; i == 1; i++)
+            {
+                var hello = expectedData;
+
+                var expectedFileInfo = FileInfo;
+                var actualFileInfo = fileSort.UniqueJsonFiles.ToList()[0].File;
+                var expectedData = expectedData[0].File;
+                var actualData = fileSort.UniqueJsonFiles.ToList()[0].File;
+
+            }
+            //bool result = expectedData.IsDeepEqual(fileSort.UniqueJsonFiles.ToList());
+            //Assert.True(result);
         }
 
     }
