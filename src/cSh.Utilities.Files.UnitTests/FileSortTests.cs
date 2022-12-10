@@ -40,22 +40,15 @@ namespace cSh.Utilities.Files.UnitTests
                 ["StartPos"] = "10",
             };
 
-            var data = new List<Dictionary<string, string>>() { jsonData1, jsonData2 };
-
-
-
+            var jsonData = new List<Dictionary<string, string>>() { jsonData1, jsonData2 };
+    
             for (int i = 0; i == 1; i++)
             {
-                var hello = expectedData;
-
-                var expectedFileInfo = FileInfo;
-                var actualFileInfo = fileSort.UniqueJsonFiles.ToList()[0].File;
-                var expectedData = expectedData[0].File;
-                var actualData = fileSort.UniqueJsonFiles.ToList()[0].File;
-
+                var expectedFileInfo = fileInfo[i];
+                var actualFileInfo = fileSort.UniqueJsonFiles.ToList()[i].File;
+                var expectedData = jsonData[i];
+                var actualData = fileSort.UniqueJsonFiles.ToList()[i].Data;
             }
-            //bool result = expectedData.IsDeepEqual(fileSort.UniqueJsonFiles.ToList());
-            //Assert.True(result);
         }
 
     }
